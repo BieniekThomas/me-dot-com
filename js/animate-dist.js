@@ -1,0 +1,1 @@
+$(function(){anime({targets:".svg path",strokeDashoffset:[anime.setDashoffset,0],easing:"easeInOutSine",duration:1500,delay:function(e,t){return 250*t},direction:"alternate",loop:!0})});

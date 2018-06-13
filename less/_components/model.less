@@ -1,0 +1,95 @@
+#itsrainingtoday{
+	width:100%;
+	display:flex;
+	position:relative;
+
+	.wrapper{
+		.box-shadow;
+	}
+
+	&:before{
+		width:50%;
+		height:100%;
+		background-color:fade(brown, 20);
+		content:'';
+		left:0;
+		top:0;
+		position:absolute;
+		z-index:-1;
+	}
+}
+
+
+
+.element{  
+  text-transform:uppercase;
+  font-family:'roboto', sans-serif;
+  padding:20px;
+  min-height:50vh;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:3;
+  position:relative;
+  transition:background 1s;
+
+  #rain{
+  	position:absolute;
+  	left:0;
+  	top:0;
+  	width:100%;
+  	height:100%;
+  	opacity:0;
+  	transition:opacity 1s;
+  }
+
+  &:hover{
+
+  	#rain{
+  		opacity:1;
+  		transition:opacity 0.25s;
+  	}
+	
+	background:darken(@dark,7);
+	transition:background 1s;
+
+  	h1{
+	    -webkit-text-stroke-color: fade(@outline-color,100);
+	    transition:all 0.25s;
+	    animation: color-change 3s linear;
+	    animation-delay:1s;
+	}
+  }
+}
+
+.element h1{
+  margin:0;
+  font-size:80px;
+  line-height:1.4;
+  letter-spacing:3px;
+  text-align:center;
+  
+  -webkit-text-stroke-color: @outline-color;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+  transition:all 0.25s;
+}
+
+@keyframes color-change{
+  0%,10%,30%,40%,47%,100%{
+    -webkit-text-stroke-color: fade(@outline-color,100);
+  }
+  
+  5%,20%,35%,45%,50%{
+    -webkit-text-stroke-color: fade(@outline-color,0);
+  }
+  
+  0%,100%{
+    filter: hue-rotate(0deg);
+  }
+  
+  50%{
+    filter: hue-rotate(-8deg);
+  }
+}
