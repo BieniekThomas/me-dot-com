@@ -4,17 +4,29 @@ $(function(){
 	bgColors.sort(function(a, b){return 0.5 - Math.random()});
 	var i=0;
 	$("[random-bg]").each(function(){
-	  $(this).css("background-color", bgColors[i]);
-	  i++;
+		  $(this).css("background-color", bgColors[i]);
+		  i++;
+
+	  	/* Falls Anzahl Elemente > Anzahl Farben */
+	  	if(bgColors.length <= i){
+	    	i=0;
+		    bgColors.sort(function(a, b){return 0.5 - Math.random()});
+	  	}
 	});
 
 	window.setInterval(function(){
-	  bgColors.sort(function(a, b){return 0.5 - Math.random()});  
-	  var i=0;
-	  
-	  $("[random-bg]").each(function(){
-	    $(this).css("background-color", bgColors[i]);
-	    i++;
-	  });
+	  	bgColors.sort(function(a, b){return 0.5 - Math.random()});  
+	  	var i=0;
+		  
+	  	$("[random-bg]").each(function(){
+		    $(this).css("background-color", bgColors[i]);
+		    i++;
+
+	     	/* Falls Anzahl Elemente > Anzahl Farben */
+		  	if(bgColors.length <= i){
+			    i=0;
+			    bgColors.sort(function(a, b){return 0.5 - Math.random()});
+		  	}
+	  	});
 	}, 10000);
 });
