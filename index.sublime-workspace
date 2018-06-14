@@ -35,7 +35,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4547,
+				"buffer_size": 4559,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -114,7 +114,9 @@
 	"expanded_folders":
 	[
 		"/C/Users/ladm-econsor/Desktop/private git/me-dot-com",
-		"/C/Users/ladm-econsor/Desktop/private git/me-dot-com/js"
+		"/C/Users/ladm-econsor/Desktop/private git/me-dot-com/js",
+		"/C/Users/ladm-econsor/Desktop/private git/me-dot-com/less",
+		"/C/Users/ladm-econsor/Desktop/private git/me-dot-com/less/_components"
 	],
 	"file_history":
 	[
@@ -245,7 +247,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -254,15 +256,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4547,
+						"buffer_size": 4559,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4048,
+								4048
 							]
 						],
 						"settings":
@@ -270,10 +272,10 @@
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1080.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -329,7 +331,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
