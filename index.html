@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>me-dot-com</title>
 
 	<!-- Simplebar import -->
@@ -12,6 +13,8 @@
 	<!-- JQuery import -->
 	<script src="/vendor/jquery-3.3.1.min.js"></script>
 	<script src="/vendor/anime.js"></script>
+	<script src="/vendor/modernizr.custom.js"></script>
+	<script src="/vendor/pagetransitions.js"></script>
 
 	<!-- Random-BG-Colors -->
 	<script src="/js/random-bg-dist.js"></script>
@@ -25,12 +28,12 @@
 	<!-- CSS-import -->
 	<link rel="stylesheet" href="/css/all.css">
 </head>
-<body data-simplebar>
+<body data-simplebar id="start">
 	<div class="page-wrapper">
 		<div class="navigation flex">
 			<div class="navigation-wrap">
 				<div class="logo" random-bg>
-					Thomas Bieniek
+					<a href="#start">Thomas Bieniek</a>
 				</div>
 				<ul>
 					<li><a href="#itsrainingtoday">It's raining today</a></li>
@@ -44,7 +47,7 @@
 				<div class="wrapper flex-center">
 					<div class="element">
 						<canvas id="rain"></canvas>
-					  	<h1>The Fabulous Lorem de la Ipsum</br>Hover me</h1>
+					  	<h1>Hover me</br>for some melan&shy;cholie</h1>
 					</div>
 				</div>
 			</div>

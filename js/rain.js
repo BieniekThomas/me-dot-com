@@ -55,3 +55,12 @@ $(function(){
 		sideways = (event.clientX / width) * 10 - 5;
 	};
 });
+
+$(function(){
+	$('#itsrainingtoday .wrapper').on("mouseenter", function(){
+		$('.dark-overlay').toggleClass('active');
+	});	
+	$('#itsrainingtoday .wrapper').on("mouseleave", function(){
+		$('.dark-overlay').toggleClass('active');
+	});
+});
