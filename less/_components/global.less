@@ -1,5 +1,11 @@
 *{
 	box-sizing:border-box;
+  	-webkit-font-smoothing: antialiased;
+ 	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+
 }
 
 body, html{
@@ -12,15 +18,21 @@ body{
 	width:100%;
 	font-family: 'Ubuntu', sans-serif;
 	color:fade(@dark, 95);
+	line-height:1.7;
 }
 
-h1,h2,h3,h4,h5,h6,.navigation{
+h1,h2,h3,h4,h5,h6{
 	font-family: 'Comfortaa', cursive;
 	color:fade(@dark, 95);
+	line-height:1;
 }
 
 .flex-column{
 	flex-direction: column;
+}
+
+.section{
+	width:100%;
 }
 
 .page-wrapper{

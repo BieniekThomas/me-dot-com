@@ -1,0 +1,1 @@
+$(function(){$(".spielplan-table tr").one("inview",function(a,e){e?$(this).addClass("appear"):$(this).removeClass("appear")})});

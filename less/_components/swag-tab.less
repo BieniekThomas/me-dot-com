@@ -1,0 +1,118 @@
+#swag-tab{
+  .content-wrapper{
+    width:100%;
+    flex-wrap:wrap;
+  }
+
+  .tab-container-content{
+    width:100%;
+    max-width:1200px;
+    min-height:360px;
+    transform: rotatez(-4deg);
+    margin-top: 30px;
+    position: relative;
+    left: 23px;
+    transition: all 0.5s ease-in-out;
+
+    .content{
+      display:none;
+      height:0;
+      transition:all 0.5s ease-in-out;
+      opacity:0;
+
+      &.active{
+        display:flex;
+        height:auto;
+        opacity:1;
+        transition:all 0.5s ease-in-out;
+      }
+
+      > *{
+        flex-grow:1;
+        width:100%;
+      }
+
+      .img-wrapper{
+        flex-basis:500px;
+        margin-right:50px;
+      }
+
+      .text-wrapper{
+        h3{
+            transform: rotatez(4deg);
+            margin-top: 50px;
+
+          &:first-letter{
+            font-size:60px;
+            position:relative;
+            margin-top:-20px;
+            float: left;
+            display: inline-block;
+          }
+        }
+        p{
+          margin-left:90px;
+          transform: rotatez(4deg);
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+.tab-items{
+  list-style:none;
+  text-align:center;
+  height:auto;
+  max-height:220px;
+  display:flex;
+  flex-grow:1;
+  padding:20px 10px;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+  cursor: pointer;
+  transition: color 0.25s;
+  transform: rotatez(4deg);
+
+  text-transform: uppercase;
+  font-weight:800;
+  /*
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  line-height:30px;
+  */
+  color:#71828a;
+  
+  &:hover{
+    color:#40464d;
+    transition: color 0.25s;
+  }
+  
+  &.active{
+    color:#6c45df;
+    transition: color 0.25s;
+  }
+}
+
+.li-wrapper{
+  width:100%;
+  max-width:1200px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+  height:auto;
+  border-bottom:1px solid #71828a;
+  transform:rotatez(-4deg);
+  flex-wrap:wrap;
+
+  .line{
+    position:absolute;
+    bottom:-2px;
+    height:3px;
+    background-color:#6c45df;
+    min-width:30px;
+    transition:all 0.5s ease-in-out;
+  }
+}

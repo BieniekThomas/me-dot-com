@@ -1,0 +1,172 @@
+.programm{
+	background-image:url('../img/bg/bg-festival.png');
+	background-position:top center;
+	background-size:100%;
+	background-repeat: no-repeat;
+
+	.headline {
+		h2{
+			margin-bottom:10px;
+		}
+
+		h4{
+			margin-bottom:0;
+		}
+		margin-bottom:80px;
+	}
+
+	.programm-row{
+		border:10px solid fade(#000, 10);
+		border-top-width:0;
+		position:relative;
+		top:50px;
+		opacity:0;
+		transition:all 0.8s;
+		transition-delay:0.35s;
+
+		&.inview{
+			opacity:1;
+		    top:0;
+		    transition:all 0.8s;
+			transition-delay:0.35s;
+	  	}
+
+		&:nth-child(2n+1){
+			border-left-width:0;
+		}
+
+		&:nth-child(2n){
+			border-right-width:0;
+			flex-direction: row-reverse;
+		}
+
+		&:first-of-type{
+			border-top-width:10px;
+		}
+
+		&.border-change{
+			border-color:fade(red,20);
+			transition:all 0.8s;
+			transition-delay: 0.35s;
+
+			.programm-desc .trennstrich-wrap:before{
+				background:@red;
+				transition:all 0.8s;
+				transition-delay:1.3s;
+			}
+		}
+
+		.programm-img{
+			flex-grow:3;
+			width:65%;
+			line-height:0;
+			overflow:hidden;
+			.flex-center;
+
+			img{
+				height:100%;
+				width:auto;
+				max-width:none;
+			}
+		}
+
+		.programm-desc{
+			flex-grow:1;
+			width:35%;
+			padding:40px;
+
+			display:flex;
+			flex-direction:column;
+
+			.date{
+				.medium;
+			}
+
+			.trennstrich-wrap{
+				position:relative;
+				margin-bottom:30px;
+				&:before{
+					content:'';
+					width:30px;
+					height:3px;
+					background:@blue;
+					position:absolute;
+					top:5px;
+					left:0;
+					transition:all 0.8s;
+					transition-delay:0.35s;
+				}
+			}
+
+			h3.prog-title{
+				font-size:35px;
+				text-transform: none;
+				margin-bottom:0;
+				line-height:1.2;
+			}
+
+			.author{
+				color:@red;
+				.bold;
+			}
+		}
+	}
+}
+
+@media (max-width:1024px){
+	.programm .programm-row{
+		
+		&:nth-child(2n+1){
+			.programm-img{
+				max-width:calc(~"50% + 10px");
+			}
+		}
+
+		.programm-img{
+			position:relative;
+			width:50%;
+			max-width:50%;
+
+			img{
+				position:absolute;
+			}
+		}
+		
+		.programm-desc{
+			max-width:50%;
+		}
+	}
+}
+
+@media (max-width:767px){
+	.programm .programm-row{
+		flex-direction: column;
+
+		.programm-img{
+			max-width:100%;
+			width:100%;
+
+			img{
+				position:static;
+				width:100%;
+				height:auto;
+			}
+		}
+
+		&:nth-child(2n){
+			flex-direction:column;
+		}
+
+		&:nth-child(2n+1){
+			.programm-img{
+				max-width:100%;
+				width:100%;
+			}
+		}
+
+		.programm-desc{
+			max-width:100%;
+			width:100%;
+		}
+	}
+}

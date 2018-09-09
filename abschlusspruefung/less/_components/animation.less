@@ -1,0 +1,235 @@
+@animation-length:40s;
+@animation-delay:3s;
+
+.banner-section{
+	.animation-wrapper{
+		opacity:0;
+		transition:opacity 0.5s;
+	}
+
+	&.animation-inview{
+		.animation-wrapper{
+			opacity:1;
+			transition:opacity 0.5s;
+			transition-delay: @animation-delay;
+		}
+	}
+}
+
+.animation-inview{
+	.animation-wrapper{
+
+		.headline{
+			h1,h2,h3, a{
+				font-size:80px;
+				-webkit-text-stroke-color:@red;
+				color:transparent;
+			    -webkit-text-stroke-width: 2px;
+			    color: transparent;
+			    letter-spacing: 3px;
+			    text-transform: uppercase;
+			}
+		}
+
+		.animation-img{
+			.box-shadow;
+			.border-radius;
+			z-index:1;
+		}
+
+
+		.step-one, .step-four, .step-six, .step-eight, .step-nine, .step-ten{
+			position:absolute;
+			width:100%;
+			height:100%;
+			top:0;
+			left:5%;
+			padding:80px 0;
+
+			width:90%;
+		}
+
+		position:absolute;
+		width:100%;
+		height:100%;
+		left:0;
+		top:0;
+		background-color:@blue;
+		background-size: cover;
+		opacity:0;
+		opacity:background 2s;
+
+		animation: animationbackground @animation-length forwards, animationstart @animation-length forwards;
+		animation-delay:@animation-delay;
+
+		.step-one{
+			.flex-center;
+			animation: stepone @animation-length;
+			animation-delay:@animation-delay;
+		}
+
+		.step-four{
+			align-items:center;
+			justify-content:center;
+			
+			.animation-image{
+				position:relative;
+				max-width:500px;
+				z-index:1;
+				animation: stepfourimagemove @animation-length;
+				animation-delay:@animation-delay;
+			}
+
+			.headline{
+				animation: stepfourtextmove @animation-length;
+				animation-delay:@animation-delay;
+			}
+
+			animation: stepfourvisible @animation-length;
+			animation-delay:@animation-delay;
+		}
+	}
+
+	.step-six{
+		animation: stepsixvisible @animation-length;
+		animation-delay:@animation-delay;
+
+		align-items:center;
+		justify-content:center;
+
+		.animation-image{
+			position:relative;
+			max-width:500px;
+			animation: stepsiximagemove @animation-length;
+			animation-delay:@animation-delay;
+			z-index:1;
+		}
+
+		.headline{
+			display:flex;
+			align-items:flex-end;
+			justify-content:center;
+			flex-direction: column;
+
+			animation: stepsixtextmove @animation-length;
+			animation-delay:@animation-delay;
+			h1,h2,h3{
+				text-align:right;
+				margin-bottom:30px;
+			}
+
+			width:100%;
+			max-width:500px;
+
+			.sub-text{
+				display: inline-block;
+				width:100%;
+				text-align:right;
+				font-size:30px;
+			}
+
+			span{
+				text-align:right;
+				color:#fff;
+				.black;
+
+				&.big{
+					font-size:40px;
+					color:@red;
+				}
+
+				&.klein{
+					font-size:25px;
+					color:@red;
+				}
+			}
+		}
+	}
+
+	.step-eight{
+		animation: stepeightvisible @animation-length;
+		animation-delay:@animation-delay;
+
+		.flex-center;
+
+		.headline{
+			.flex-center;
+			position:relative;
+		}
+
+		.double{
+			position:absolute;
+			top:0;
+
+			animation: stepeighttextmove @animation-length ease-in-out;
+			animation-delay:@animation-delay;
+		}
+	}
+
+	.step-nine{
+		animation: stepninevisible @animation-length;
+		animation-delay:@animation-delay;
+
+		.animation-image{
+			max-height:450px;
+			overflow:hidden;
+			.flex-center;
+			z-index:1;
+
+			animation: stepnineimagemove @animation-length;
+			animation-delay:@animation-delay;
+
+			img{
+				height:100%;
+				width:auto;
+			}
+		}
+
+		.animation-text-wrap{
+			animation: stepninetextmove @animation-length;
+			animation-delay:@animation-delay;
+
+			display:flex;
+			flex-direction: column;
+			justify-content:space-between;
+			padding-left:50px;
+
+
+			height:80%;
+
+			> div{
+				width:100%;
+			}
+
+			.headline{
+				h1,h2,h3{
+					text-align:left;
+				}
+			}
+			
+			.sub-text{
+				color:#fff;
+				line-height:1.4;
+				font-size:25px;
+				.black;
+
+				.big{
+					color:@red;
+					font-size:35px;
+				}
+			}
+		}
+	}
+
+	.step-ten{
+		animation: steptenvisible @animation-length;
+		animation-delay:@animation-delay;
+		.flex-center;
+
+		.headline{
+			animation: steptentextmove @animation-length;
+			animation-delay:@animation-delay;
+			.flex-center;
+		}
+	}
+}

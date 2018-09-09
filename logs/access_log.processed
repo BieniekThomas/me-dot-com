@@ -1,0 +1,3 @@
+62.75.170.116 - - [25/Nov/2017:19:28:09 +0000] "GET /.well-known/acme-challenge/IrHSX958BQ HTTP/1.1" 200 260 "-" "GuzzleHttp/6.2.1 curl/7.47.0 PHP/5.6.30"
+66.133.109.36 - - [25/Nov/2017:19:28:11 +0000] "GET /.well-known/acme-challenge/3Pe1GG8NtbXAA0tiMIeleP6r7auL64TvpzTxiM1gmJk HTTP/1.1" 200 318 "-" "Mozilla/5.0 (compatible; Let's Encrypt validation server; +https://www.letsencrypt.org)"
+66.133.109.36 - - [25/Nov/2017:19:28:13 +0000] "GET /.well-known/acme-challenge/wc3V0VRsc_2W8gEfr-XZisTOTgZXsechPm7U9-Lzx90 HTTP/1.1" 200 318 "-" "Mozilla/5.0 (compatible; Let's Encrypt validation server; +https://www.letsencrypt.org)"

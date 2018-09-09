@@ -1,0 +1,106 @@
+.start-text-wrap{
+	padding-right:30px;
+}
+
+.start-text{
+	flex-basis:350px;
+	flex-grow:3;
+	align-items:center;
+	font-size:18px;
+
+	.icon-wrap{
+		width:80px;
+		margin-right:40px;
+	}
+}
+
+.start{
+	max-width:720px;
+	.medium-italic{
+		font-size:30px;
+	}
+
+	.icon-spielplan{
+		margin-right:20px;
+	}	
+
+	a{
+		font-size:22px;
+		display: flex;
+		align-items:center;
+	}
+}
+
+.start-area{
+	padding-bottom:80px;
+	flex-wrap:wrap;
+}
+
+.start-image{
+	flex-basis:350px;
+	flex-grow:1;
+	.flex-center;
+
+	img{
+		.box-shadow;
+		.border-radius;
+	}
+}
+
+.quote{
+	width:100%;
+	display:inline-block;
+	margin:20px 0;
+	padding-left:30px;
+	border-left:10px solid @red;
+	.medium-italic;
+}
+
+@media (max-width:850px){
+	
+	.start-area{
+		flex-direction: column;
+		padding-bottom:0;
+
+		.start-text{
+			flex-basis:auto;
+		}
+
+		.start-img{
+			flex-basis:auto;
+			img{
+				width:100%;
+				height:auto;
+			}
+		}
+	}
+
+	.start-text-wrap{
+		padding-right:0;
+		display:block;
+		float:left;
+		width:100%;
+
+		.icon-wrap{
+			float:left;
+		}
+	}
+
+	.start-image{
+		order:-1;
+		margin-bottom:40px;
+		flex-basis:auto;
+	}
+}
+
+@media (max-width:480px){
+	.start {
+		.medium-italic{
+			font-size:22px;
+		}
+
+		a{
+			font-size:18px;
+		}
+	}
+}

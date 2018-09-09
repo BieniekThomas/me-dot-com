@@ -1,0 +1,1 @@
+$(function(){$(".programm-row").one("inview",function(e,i){i?$(this).toggleClass("inview"):$(this).removeClass("inview")}),$(".programm-row").on("inview",function(e,i){i?$(this).toggleClass("border-change"):$(this).removeClass("border-change")})});

@@ -1,0 +1,45 @@
+.fixed-buttons{
+	position:fixed;
+	right:10px;
+	z-index: 9;
+	top:calc(~"50vh - 110px");
+	display:flex;
+	flex-direction: column;
+
+	.icon-wrap{
+		width:80px;
+		height:80px;
+		border-radius:100%;
+		background:@blue;
+		.flex-center;
+		.box-shadow;
+
+		&:first-child{
+			margin-bottom:20px;
+		}
+
+		a{
+			width:100%;
+			height:100%;
+			.flex-center;
+		}
+	}
+}
+
+@media (max-width: 1650px){
+	.fixed-buttons{
+		flex-direction: row;
+		bottom:0;
+		right:10px;
+		top:auto;
+
+		.icon-wrap{
+			width:60px;
+			height:60px;
+
+			&:first-child{
+				margin-right:10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+$(function(){$(".animation-section").on("inview",function(i,n){n?$(this).addClass("animation-inview"):$(this).removeClass("animation-inview")})});

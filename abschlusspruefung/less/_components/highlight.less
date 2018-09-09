@@ -1,0 +1,97 @@
+.highlight{
+	position:relative;
+
+	&:before, &:after{
+		z-index:0;
+	}
+
+	.headline{
+		position:relative;
+		z-index: 1;
+	}
+
+	&:before{
+		content:url('../img/bg/highlight-unten-links.png');
+		position:absolute;
+		left:0;
+		bottom:0;
+		line-height:0;
+	}
+
+	&:after{
+		content:url('../img/bg/highlight-oben-rechts.png');
+		position:absolute;
+		right:0;
+		top:0;
+		line-height:0;
+	}
+}
+
+.boxed-content{
+	position:relative;
+	z-index:3;
+	max-width:1200px;
+	margin:0 auto 60px;
+
+	.img-wrap{
+		flex-grow:1;
+		line-height:0;
+		.flex-center;
+		overflow:hidden;
+
+		img{
+			max-width:none;
+			height:100%;
+			width:auto;
+		}
+	}
+
+	.blue-box{
+		background:@blue;
+		color:#fff;
+		padding:40px;
+		width:400px;
+
+		display: flex;
+		align-items:center;
+		justify-content: space-between;
+		flex-direction: column;
+
+		.icon-wrap-auge{
+			padding:30px 0;
+			border-bottom:2px solid @red;
+			margin-bottom:30px;
+			width:100%;
+
+			.flex-center;
+		}
+
+		.button{
+			align-self:flex-start;
+		}
+	}
+}
+
+@media (max-width:970px){
+	.highlight{
+
+		&:before, &:after{
+			opacity:0.3;
+		}
+
+		.boxed-content{
+			flex-direction: column;
+
+			.img-wrap{
+				img{
+					width:100%;
+					height:auto;
+				}
+			}
+
+			.blue-box{
+				width:100%;
+			}
+		}
+	}
+}

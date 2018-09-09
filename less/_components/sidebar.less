@@ -1,0 +1,77 @@
+.sidebar{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index: 50;
+	height:100%;
+	padding-top:50px;
+	padding-left:20px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+ 	color: #000;
+	mix-blend-mode: difference;
+
+	.sidebar-wrapper{
+		height:250px;
+		
+
+		.sideblock{
+			height:50px;
+			width:50px;
+			margin:10px 0;
+			border-radius:100%;
+			background-color:@bg-navi;
+			transition:all 0.25s;
+    		background-position: center;
+    		background-repeat: no-repeat;
+
+			a{
+				opacity:0;
+				width:50px;
+				display:inline-block;
+				height:100%;
+				padding-left:0px;
+				display:flex;
+				align-items:center;
+				transition:all 0.25s;
+				color:#fff;
+				border-radius:50px;
+				font-size:0;
+			}
+
+			&:hover{
+
+				background-color:#fff;
+
+				a{
+					opacity:1;
+					transition:all 0.25s;
+					width:200px;
+					padding-left:60px;
+					font-size:16px;
+				}
+			}
+		}
+	}
+}
+
+.codepen{
+	background-image:url('/img/codepen-logo.png');
+    background-size: 84%;
+}
+
+.github{
+	background-image:url('/img/github-logo.svg');
+    background-size: 80%;
+}
+
+.soundcloud{
+	background-image:url('/img/soundcloud.svg');
+    background-size: 65%;
+}
+
+.tb-cv{
+	background-image:url('/img/approved.svg');
+	background-size: 65%;
+}

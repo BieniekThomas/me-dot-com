@@ -24,4 +24,9 @@ $(function(){
       }
     }
   });
+
+/*  $('.navigation ul li a').click(function(){
+    $('body').removeAttr("class");
+    $('body').addClass('fp-viewing-' + $(this).attr('fp-value'));
+  });*/
 });
